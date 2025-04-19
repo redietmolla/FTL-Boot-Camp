@@ -1,0 +1,41 @@
+Personal Library - SQL Queries
+
+1. Create Table:
+---------------------
+CREATE TABLE Books (
+    BookID INTEGER PRIMARY KEY,
+    Title TEXT,
+    Author TEXT,
+    YearPublished INTEGER,
+    Genre TEXT
+);
+
+2. Insert Data:
+---------------------
+INSERT INTO Books (BookID, Title, Author, YearPublished, Genre)
+VALUES 
+    (1, '1984', 'George Orwell', 1949, 'Fiction'),
+    (2, 'Sapiens', 'Yuval Noah Harari', 2011, 'Non-Fiction'),
+    (3, 'The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Fiction'),
+    (4, 'The Silent Patient', 'Alex Michaelides', 2019, 'Mystery'),
+    (5, 'Educated', 'Tara Westover', 2018, 'Non-Fiction');
+
+3. Select All Books:
+---------------------
+SELECT * FROM Books;
+
+4. Books Published After 2000:
+---------------------
+SELECT * FROM Books WHERE YearPublished > 2000;
+
+5. Books in the Fiction Genre:
+---------------------
+SELECT * FROM Books WHERE Genre = 'Fiction';
+
+6. Update Book:
+---------------------
+UPDATE Books SET YearPublished = 2025 WHERE BookID = 1;
+
+7. Delete Book:
+---------------------
+DELETE FROM Books WHERE BookID = 5;
